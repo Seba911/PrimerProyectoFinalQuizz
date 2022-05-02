@@ -1,0 +1,27 @@
+.headerBackground{
+    background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.775)),
+    url('images/headerSimpson.jpg');
+    background-size: cover;
+    background-position:top;
+    height: 300px;
+}
+
+.backgroundPersonaje{
+    background-image: url('images/homero.png');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size:calc(200px - 1rem);
+    background-position:center;
+    background-color: rgb(75, 174, 255)
+}
+
+h1 {
+    color: rgb(255, 230, 3);
+    text-shadow: 1px 1px 5px black
+}
+
+h3 {
+    text-shadow: 1px 1px 2px black
+}
+

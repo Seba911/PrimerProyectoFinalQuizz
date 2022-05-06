@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quizz de Los Simpson</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
 </head>
@@ -15,9 +15,9 @@
         <header class="d-flex justify-content-around align-items-center headerBackground">
             <h1 class="text-center" style="font-weight: 700;">Quizz de Los Simpson</h1>
             <div>
-                <ul class="card m-0 p-4" style="list-style: none">
-                    <h4>Top 5: Puntajes más altos</h4>
-                    <li>
+                <h4>Top 5: Puntajes más altos</h4>
+                <ul class="card m-0 p-4" id="topFive" style="list-style: none">
+                    <!-- <li>
                         Jorge: 600 puntos
                     </li>
                     <li>
@@ -31,40 +31,44 @@
                     </li>
                     <li>
                         Ramiro: 350 puntos
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </header>
         <div class="backgroundPersonaje text-center">
             <div class="m-0 p-0">
-                <h4 class="text-white pt-5">Seleccionaste a Homero</h4>
+                <h4 class="text-white pt-5">Seleccionaste a <div id="nombrePersonaje"><!-- Aqui va el personae --></div></h4>
+            </div>
+
+            <div id="prueba">
+
             </div>
             
             <div class="text-center mt-5">
-                <h3 class="text-white" style="font-weight: 700;">¿Cuál es el apellido de Homero?</h3>
+                <div class="text-white" style="font-weight: 700;" id="question"><!-- la pregunta va aqui --></div>
                 <ul class="row justify-content-center mx-4 p-0" style="list-style: none;">
                     <li class="card col-xs-6 col-md-2 mx-4 my-2 p-3">
-                        <h5>SIMPSON</h5>
-                        <button type="button" class="btn btn-primary">Opcion A</button>
+                        <div id="opcionA"> </div>
+                        <button type="button" class="btn btn-primary" id="botonOpcionA">Opcion A</button>
                     </li>
                     <li class="card col-xs-6 col-md-2 mx-4 my-2 p-3">
-                        <h5>THOMPSON</h5>
-                        <button type="button" class="btn btn-success">Opcion B</button>
+                        <div id="opcionB"> </div>
+                        <button type="button" class="btn btn-success" id="botonOpcionB">Opcion B</button>
                     </li>
                     <li class="card col-xs-6 col-md-2 mx-4 my-2 p-3">
-                        <h5>FLIMPSON</h5>
-                        <button type="button" class="btn btn-danger">Opcion C</button>
+                        <div id="opcionC"> </div>
+                        <button type="button" class="btn btn-danger" id="botonOpcionC">Opcion C</button>
                     </li>
                     <li class="card col-xs-6 col-md-2 mx-4 my-2 p-3">
-                        <h5>PATIÑO</h5>
-                        <button type="button" class="btn btn-warning">Opcion D</button>
+                        <div id="opcionD"> </div>
+                        <button type="button" class="btn btn-warning" id="botonOpcionD">Opcion D</button>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- <script src="./script.js"></script> -->
-    <script src="./script.js"></script>
+    <script src="./newScript.js"></script>
 </body>
 
 </html>

@@ -169,9 +169,13 @@ function questionFour(question, opciones) {
 
 function pushNuevoJugadorInTopFive(){
     if (nombreNuevoJugador.puntajeFinal >= arrTopFive[0].puntajeFinal){
+
         arrTopFive.unshift(nombreNuevoJugador)
         arrTopFive.pop()
         console.log(arrTopFive)
+        mostrarTopFive()
+   
+
         alert("Saliste 1ro! Sos el más simpsonmaniaco del Quizz!")
     } else if (arrTopFive[0].puntajeFinal >= nombreNuevoJugador.puntajeFinal && nombreNuevoJugador.puntajeFinal >= arrTopFive[1].puntajeFinal){
         arrTopFive.splice(1, 0, nombreNuevoJugador)
@@ -332,6 +336,22 @@ let arrTopFive = [
     {nombreJugador: "Ramiro", puntajeFinal: 355 }
 ]
 
+let topFive = document.getElementById("topFive")
+
+
+
+function mostrarTopFive(){
+    for (const top5 of arrTopFive ){
+        let li = document.createElement("li")
+        li.innerHTML = JSON.stringify(`${top5.nombreJugador}: ${top5.puntajeFinal} puntos `);
+        topFive.append(li)
+    }
+    arrTopFive
+}
+mostrarTopFive()
+
+
+
 class nuevoJugador {
     constructor (nombreJugador, puntajeFinal){
         this.nombreJugador = nombreJugador
@@ -345,6 +365,7 @@ class nuevoJugador {
         return this.puntajeFinal
     }
 }
+
 
 // aun no implmemente esta class
 /* class dbTopFive {
